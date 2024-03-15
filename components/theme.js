@@ -41,10 +41,10 @@ export default function Theme({ theme = "light" }) {
               </div> */}
               <Tabs items={dataTabs} />
               <div className="flex flex-col">
-                <span className="link">I'm a simple link</span>
-                <span className="link link-primary">I'm a simple link</span>
-                <span className="link link-secondary">I'm a simple link</span>
-                <span className="link link-accent">I'm a simple link</span>
+                <span className="link">{`I'm a simple link`}</span>
+                <span className="link link-primary">{`I'm a simple link`}</span>
+                <span className="link link-secondary">{`I'm a simple link`}</span>
+                <span className="link link-accent">{`I'm a simple link`}</span>
               </div>
             </div>
             <div className="flex flex-col gap-3 md:w-1/2">

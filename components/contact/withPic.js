@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Contact({ className = "" }) {
   const servicesItems = [
     "Mobile development",
@@ -9,10 +11,7 @@ export default function Contact({ className = "" }) {
   return (
     <section className={`flex overflow-hidden ${className}`}>
       <div className="flex-1 hidden lg:block">
-        <img
-          src="/img/common/contact.jpg"
-          className="w-full h-screen object-cover"
-        />
+        <Image src="/img/common/contact.jpg" className="w-full h-screen object-cover" alt="contact.jpg"/>
       </div>
       <div className="py-12 flex-1 lg:flex lg:justify-center lg:h-screen lg:overflow-auto">
         <div className="max-w-lg flex-1 mx-auto px-4">

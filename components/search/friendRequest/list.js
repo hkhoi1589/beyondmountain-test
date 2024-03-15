@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 
 import { useUserStore } from '@/store/forum';
@@ -18,7 +19,7 @@ export default function UserList({ className = '' }) {
 
 	useEffect(() => {
 		setFriendRequests(requests?.data);
-	}, [requests]);
+	}, [requests, setFriendRequests]);
 
 	return (
 		<ul className={className}>

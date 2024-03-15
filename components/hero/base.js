@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BG from "@/components/bg/rotate45";
+import Image from "next/image";
 
 export default function Hero({ className = "" }) {
   return (
@@ -58,7 +59,7 @@ export default function Hero({ className = "" }) {
             </div>
           </div>
           <div className="flex-1 hidden md:block">
-            <img src="/img/common/platform.png" className="max-w-xl w-full" />
+            <Image src="/img/common/platform.png" alt="platform.png" className="max-w-xl w-full" />
           </div>
         </div>
       </section>

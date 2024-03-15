@@ -1,4 +1,5 @@
 import Effect from '@/components/effect';
+import Image from 'next/image';
 
 export default function Team({ className = '' }) {
 	return (
@@ -18,7 +19,7 @@ export default function Team({ className = '' }) {
 					<div className='my-10 md:-mr-6 flex items-center justify-center'>
 						<div className='avatar order-1'>
 							<div className='w-20 rounded-full ring ring-primary'>
-								<img src='/img/avatar/user-2.jpg' />
+								<Image src='/img/avatar/user-2.jpg' alt='user-2.jpg' />
 							</div>
 						</div>
 						<div className='bg-primary text-white rounded text-lg px-3 py-2 -mx-2'>Dung Pham</div>
@@ -26,7 +27,7 @@ export default function Team({ className = '' }) {
 					<div className='my-16 flex items-center justify-end'>
 						<div className='avatar'>
 							<div className='w-20 rounded-full ring ring-accent'>
-								<img src='/img/avatar/user-3.jpg' />
+								<Image src='/img/avatar/user-3.jpg' alt='user-3.jpg' />
 							</div>
 						</div>
 						<div className='bg-accent text-white rounded text-lg px-3 py-2 -mx-2'>Long Huynh</div>
@@ -34,7 +35,7 @@ export default function Team({ className = '' }) {
 					<div className='my-10 flex items-center justify-end'>
 						<div className='avatar'>
 							<div className='w-20 rounded-full ring ring-info'>
-								<img src='/img/avatar/user-4.jpg' />
+								<Image src='/img/avatar/user-4.jpg' alt='user-4.jpg' />
 							</div>
 						</div>
 						<div className='bg-info text-white rounded text-lg px-3 py-2 -mx-2'>Cuong Quoc</div>
@@ -42,7 +43,7 @@ export default function Team({ className = '' }) {
 					<div className='my-12 flex items-center justify-start'>
 						<div className='avatar order-1'>
 							<div className='w-20 rounded-full ring ring-success'>
-								<img src='/img/avatar/user-5.jpg' />
+								<Image src='/img/avatar/user-5.jpg' alt='user-5.jpg' />
 							</div>
 						</div>
 						<div className='bg-success text-white rounded text-lg px-3 py-2 -mx-2'>Tuyen Huynh</div>
@@ -50,7 +51,7 @@ export default function Team({ className = '' }) {
 					<div className='my-10 flex items-center justify-start'>
 						<div className='avatar'>
 							<div className='w-20 rounded-full ring ring-error'>
-								<img src='/img/avatar/a-1.jpg' />
+								<Image src='/img/avatar/a-1.jpg' alt='a-1.jpg' />
 							</div>
 						</div>
 						<div className='bg-error text-white rounded text-lg px-3 py-2 -mx-2'>Khoi Huynh</div>
@@ -58,7 +59,7 @@ export default function Team({ className = '' }) {
 					<div className='my-16 flex items-center justify-center'>
 						<div className='avatar'>
 							<div className='w-20 rounded-full ring ring-warning'>
-								<img src='/img/avatar/a-2.jpg' />
+								<Image src='/img/avatar/a-2.jpg' alt='a-2.jpg' />
 							</div>
 						</div>
 						<div className='bg-warning text-white rounded text-lg px-3 py-2 -mx-2'>Dat Huynh</div>
@@ -66,7 +67,7 @@ export default function Team({ className = '' }) {
 					<div className='my-10 flex items-center justify-start'>
 						<div className='avatar'>
 							<div className='w-20 rounded-full ring ring-primary'>
-								<img src='/img/avatar/a-3.jpg' />
+								<Image src='/img/avatar/a-3.jpg' alt='a-3.jpg' />
 							</div>
 						</div>
 						<div className='bg-primary text-white rounded text-lg px-3 py-2 -mx-2'>Bao Huynh</div>
@@ -74,7 +75,7 @@ export default function Team({ className = '' }) {
 					<div className='my-16 flex items-center justify-start'>
 						<div className='avatar order-1'>
 							<div className='w-20 rounded-full ring ring-secondary'>
-								<img src='/img/avatar/a-4.jpg' />
+								<Image src='/img/avatar/a-4.jpg' alt='a-4.jpg' />
 							</div>
 						</div>
 						<div className='bg-secondary text-white rounded text-lg px-3 py-2 -mx-2'>

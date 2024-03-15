@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Feature({ className = "" }) {
   return (
     <div id="our-story" className={`${className}`}>
@@ -26,13 +28,7 @@ export default function Feature({ className = "" }) {
             </div>
           </div>
           <div className="sm:hidden lg:block lg:max-w-xl">
-            <img
-              src="/img/course/dashboard-2.png"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "auto", height: "auto" }} // optional
-            />
+            <Image src="/img/course/dashboard-2.png" alt="dashboard-2.png" width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} />
           </div>
         </div>
       </section>
@@ -48,26 +44,14 @@ export default function Feature({ className = "" }) {
                 your members, on any device.
               </p>
               <div className="flex items-center justify-center pt-8">
-                <img
-                  src="/img/course/group.png"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "auto", height: "auto", maxHeight: "240px" }} // optional
-                />
+                <Image src="/img/course/group.png" alt="group.png" width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} />
               </div>
             </figure>
           </li>
           <li className="bg-purple-50 p-8 rounded-box">
             <figure className="space-y-4">
               <div className="flex items-center justify-center pb-8">
-                <img
-                  src="/img/course/dashboard.png"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "auto", height: "auto", maxHeight: "240px" }} // optional
-                />
+                <Image src="/img/course/dashboard.png" alt="dashboard.png" width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} />
               </div>
               <div className="font-semibold text-4xl">
                 Functionality & design.
@@ -86,13 +70,7 @@ export default function Feature({ className = "" }) {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex rounded-box bg-[#EFC9A6] aspect-square overflow-hidden">
             <div className="w-3/5 relative">
-              <img
-                src="/img/course/vertical-1.jpg"
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "auto", height: "auto" }} // optional
-              />
+              <Image src="/img/course/vertical-1.jpg" alt="vertical-1.jpg" width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} />
               <div className="p-4 absolute top-0 w-full drop-shadow-md font-semibold text-4xl md:text-6xl text-white font-merienda">
                 Spread the Word
               </div>
@@ -110,13 +88,7 @@ export default function Feature({ className = "" }) {
               a social setting.
             </div>
             <div className="flex-1 flex items-end relative overflow-hidden">
-              <img
-                src="/img/course/square-1.jpg"
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }} // optional
-              />
+              <Image src="/img/course/square-1.jpg" alt="square-1.jpg" width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} />
               <div className="absolute inset-0 w-full flex items-center">
                 <div className="text-center w-full drop-shadow-md font-semibold text-4xl md:text-6xl text-white font-merienda">
                   Cross Borders
@@ -131,13 +103,7 @@ export default function Feature({ className = "" }) {
               Get in contact!
             </div>
             <div className="w-3/5 relative bg-base-300">
-              <img
-                src="/img/course/vertical-2.png"
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "auto", height: "auto" }} // optional
-              />
+              <Image src="/img/course/vertical-2.png" alt="vertical-2.png" width={0} height={0} sizes="100vw" style={{ width: "auto", height: "auto" }} />
               <div className="p-4 absolute top-0 w-full drop-shadow-md font-semibold text-4xl md:text-6xl text-white font-merienda">
                 Leave a Mark
               </div>

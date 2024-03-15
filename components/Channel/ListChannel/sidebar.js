@@ -19,7 +19,7 @@ function ListChannel() {
 
 	useEffect(() => {
 		setMutateYourChannels(mutate);
-	}, []);
+	}, [mutate, setMutateYourChannels]);
 
 	// neu loi
 	useEffect(() => {
@@ -39,7 +39,7 @@ function ListChannel() {
 
 		// luu vao local
 		setYourChannels(modifiedListChannel);
-	}, [channels, channel_id]);
+	}, [channels, channel_id, setYourChannels]);
 
 	// useEffect(() => {
 	// 	console.log('yourChannels', yourChannels);

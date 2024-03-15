@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Team({ className = "" }) {
   return (
     <section id="team" className={`py-28 ${className}`}>

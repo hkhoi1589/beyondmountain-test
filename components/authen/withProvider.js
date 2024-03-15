@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BG from '@/components/bg/twoRadial';
+import Image from 'next/image';
 export default function Authen({ className = '' }) {
 	return (
 		<section
@@ -8,7 +9,7 @@ export default function Authen({ className = '' }) {
 				<div className='text-center relative'>
 					<BG />
 					<div className='flex items-center justify-center'>
-						<img src='/img/svg/logo.svg' width={36} />
+						<Image src='/img/svg/logo.svg' alt='logo.svg' width={36} />
 						<span className='ml-3 text-3xl font-semibold opacity-90'>WindyUI</span>
 					</div>
 					<div className='mt-5 space-y-2'>
@@ -16,7 +17,7 @@ export default function Authen({ className = '' }) {
 							Log in to your account
 						</h3>
 						<div>
-							Don't have an account?{' '}
+							{`Don't have an account?`}
 							<Link href='/' className='font-medium text-primary hover:text-primary'>
 								Sign up
 							</Link>

@@ -23,7 +23,7 @@ function ListChannel() {
 
 	useEffect(() => {
 		setMutate(mutate);
-	}, []);
+	}, [mutate, setMutate]);
 
 	useEffect(() => {
 		if (!isError && !errorAdd) return;
@@ -33,7 +33,7 @@ function ListChannel() {
 
 	useEffect(() => {
 		setDataChannels(channels);
-	}, [channels]);
+	}, [channels, setDataChannels]);
 
 	// useEffect(() => {
 	// 	console.log('dataChannels', dataChannels);

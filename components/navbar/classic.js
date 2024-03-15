@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Navbar({ className = '' }) {
@@ -5,9 +6,9 @@ export default function Navbar({ className = '' }) {
 		<div className={`backdrop-blur ${className}`}>
 			<nav className='container px-4 mx-auto flex justify-between min-h-16'>
 				<div className='flex items-center'>
-					<a href='/'>
-						<img width={134.5} height={32} src='/img/svg/beyond-grey.svg' />
-					</a>
+					<Link href='/'>
+						<Image src='/img/svg/beyond-grey.svg' alt='beyond-grey.svg' width={134.5} height={32} />
+					</Link>
 				</div>
 				<div className='flex items-center'>
 					<ul className='menu menu-lg menu-horizontal px-1 hidden lg:flex'>

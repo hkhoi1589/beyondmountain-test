@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Effect from '@/components/effect';
+import Image from 'next/image';
 
 export default function Feature({ className = '' }) {
 	return (
@@ -34,7 +35,7 @@ export default function Feature({ className = '' }) {
 							</div>
 						</div>
 						<div className='flex-none max-w-md mx-auto'>
-							<img src='/img/common/students.png' alt='' className='w-full' />
+							<Image src='/img/common/students.png' alt='students.png' className='w-full' />
 						</div>
 					</div>
 				</section>
@@ -67,7 +68,7 @@ export default function Feature({ className = '' }) {
 						falseState: 'opacity-0 translate-x-6',
 					}}>
 					<div className='rounded-2xl bg-gradient-to-b from-base-300/30 p-8'>
-						<img src='/img/course/childs.png' className='max-w-96 mx-auto' />
+						<Image src='/img/course/childs.png' className='max-w-96 mx-auto' alt='childs.png'/>
 					</div>
 				</Effect>
 			</section>

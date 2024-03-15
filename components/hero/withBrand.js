@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero({ className = "" }) {
@@ -18,7 +19,7 @@ export default function Hero({ className = "" }) {
             </p>
             <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
               <Link href="#" className="btn btn-primary btn-sm rounded-full">
-                Let's get started
+                {`Let's get started`}
               </Link>
               <Link href="#" className="btn btn-outline btn-sm rounded-full">
                 Get access
@@ -38,7 +39,7 @@ export default function Hero({ className = "" }) {
             </div>
           </div>
           <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
-            <img src="/img/common/startup.jpeg" className="rounded-2xl" />
+            <Image src="/img/common/startup.jpeg" alt="startup.jpeg" className="rounded-2xl" />
           </div>
         </div>
         <div className="mt-14 px-4 md:px-8">

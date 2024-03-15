@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Testimonial({ className = "" }) {
   const testimonials = [
     {
@@ -42,7 +44,7 @@ export default function Testimonial({ className = "" }) {
               <li key={idx} className="bg-base-300/30 p-4 rounded-xl">
                 <figure>
                   <div className="flex items-center gap-x-4">
-                    <img src={item.avatar} className="w-16 h-16 rounded-full" />
+                    <Image src={item.avatar} alt="avatar" className="w-16 h-16 rounded-full" />
                     <div>
                       <span className="block opacity-90 font-semibold">
                         {item.name}

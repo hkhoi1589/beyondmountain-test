@@ -22,7 +22,7 @@ export default function ChannelList({ className = '' }) {
 
 	useEffect(() => {
 		setChannelRequests(requests);
-	}, [requests]);
+	}, [requests, setChannelRequests]);
 
 	// useEffect(() => {
 	// 	console.log('channelRequests', channelRequests);

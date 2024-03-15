@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -23,9 +24,9 @@ export default function Navbar({ className = '' }) {
 		<div className={`backdrop-blur bg-base-100 ${className}`}>
 			<nav className='container mx-auto px-4 flex justify-between min-h-16'>
 				<div className='flex items-center'>
-					<a href='/' className='overflow-hidden max-h-[69px] relative'>
-						<img className='logo-mono' height={48} src='/img/svg/beyond-full.svg' />
-					</a>
+					<Link href='/' className='overflow-hidden max-h-[69px] relative'>
+						<Image src='/img/svg/beyond-full.svg' alt='beyond-full.svg' className='logo-mono' height={48} />
+					</Link>
 				</div>
 				<div className='inline-flex items-center space-x-3'>
 					{list.map((item, idx) => (

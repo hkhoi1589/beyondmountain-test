@@ -1,4 +1,5 @@
 import BG from "@/components/bg/radial";
+import Image from "next/image";
 
 export default function Testimonial({ className = "" }) {
   const testimonials = [
@@ -65,10 +66,7 @@ export default function Testimonial({ className = "" }) {
                     </p>
                   </blockquote>
                   <div className="flex items-center gap-x-4 p-4 mt-6 bg-base-100">
-                    <img
-                      src={item.avatar}
-                      className="w-16 h-16 rounded-full border-2 border-primary"
-                    />
+                    <Image src={item.avatar} alt="avatar" className="w-16 h-16 rounded-full border-2 border-primary" />
                     <div>
                       <span className="block opacity-90 font-semibold">
                         {item.name}

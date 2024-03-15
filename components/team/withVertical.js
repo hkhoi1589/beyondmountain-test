@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Team({ className = "" }) {
@@ -48,8 +49,8 @@ export default function Team({ className = "" }) {
             Meet our talent team
           </h3>
           <p className="opacity-70 mt-3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum has been the industry's standard dummy.
+            {`Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.Lorem Ipsum has been the industry's standard dummy.`}
           </p>
         </div>
         <div className="mt-12">
@@ -57,11 +58,7 @@ export default function Team({ className = "" }) {
             {team.map((item, idx) => (
               <li key={idx} className="gap-8 sm:flex">
                 <div className="w-full h-60">
-                  <img
-                    src={item.avatar}
-                    className="w-full h-full object-cover object-center shadow-md rounded-xl"
-                    alt=""
-                  />
+                  <Image className="w-full h-full object-cover object-center shadow-md rounded-xl" src={item.avatar} alt="avatar" />
                 </div>
                 <div className="mt-4 sm:mt-0">
                   <h4 className="text-lg opacity-80 font-semibold">

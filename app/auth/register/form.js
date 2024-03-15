@@ -1,5 +1,4 @@
 'use client';
-import fetcher from '@/utils/fetcher';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { useUserStore } from '@/store/forum';
@@ -11,7 +10,7 @@ export default function Form() {
 
 	useEffect(() => {
 		if (access) return router.push('/forum');
-	}, [access]);
+	}, [access, router]);
 
 	// prevent submitting invalid or empty emails
 	const {

@@ -13,9 +13,9 @@ import { redirect, useSearchParams } from 'next/navigation';
 
 function ListPost({ isChannel = false }) {
 	let channel_id = '';
+	const searchParams = useSearchParams();
 
 	if (isChannel) {
-		const searchParams = useSearchParams();
 		channel_id = searchParams.get('channel_id');
 	}
 
@@ -34,18 +34,18 @@ function ListPost({ isChannel = false }) {
 
 	useEffect(() => {
 		setMutatePinPosts(mutate);
-	}, []);
+	}, [mutate, setMutatePinPosts]);
 
 	useEffect(() => {
 		if (!isError && !errorAdd && !errorAddChannel) return;
 		toast.error(errorAdd || isError);
 		console.log('ListPinPost', errorAdd || isError);
 		redirect('/forum/');
-	}, [isError, errorAdd]);
+	}, [isError, errorAdd, errorAddChannel]);
 
 	useEffect(() => {
 		setDataPinPosts(pinPosts);
-	}, [pinPosts]);
+	}, [pinPosts, setDataPinPosts]);
 
 	// useEffect(() => {
 	// 	console.log('pinposts', data);

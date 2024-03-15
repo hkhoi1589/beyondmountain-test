@@ -5,6 +5,8 @@ import SwapTheme from '@/components/Button/SwapTheme';
 import { removeServiceWorker } from '@/utils/firebase';
 
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Avatar = dynamic(() => import('@/components/avatar/base'));
 const Search = dynamic(() => import('@/components/search/base'));
@@ -44,14 +46,9 @@ export default function Navbar({ className = '' }) {
 						}}>
 						<i className='ri-menu-line text-2xl'></i>
 					</button>
-					<a href='/' className='overflow-hidden max-h-[69px] relative'>
-						<img
-							className='logo-mono'
-							alt='logo.png'
-							height={48}
-							src='/img/svg/beyond-full.svg'
-						/>
-					</a>
+					<Link href='/' className='overflow-hidden max-h-[69px] relative'>
+						<Image src='/img/svg/beyond-full.svg' className='logo-mono' alt='logo.png' height={48} />
+					</Link>
 				</div>
 
 				<div className='w-full max-w-2xl mx-auto hidden md:block'>

@@ -21,9 +21,9 @@ import userApi from '@/services/userApi.service';
 function NewPost({ className = '', isChannel = false }) {
 	let channel_id = '',
 		channel_name = 'Select a channel';
+	const searchParams = useSearchParams();
 
 	if (isChannel) {
-		const searchParams = useSearchParams();
 		channel_id = searchParams.get('channel_id');
 		channel_name = searchParams.get('channel_name');
 	}
@@ -127,7 +127,7 @@ function NewPost({ className = '', isChannel = false }) {
 
 	useEffect(() => {
 		setSelectChannel({ name: channel_name, id: channel_id });
-	}, [channel_id]);
+	}, [channel_id, channel_name]);
 
 	if (!editor) return null;
 

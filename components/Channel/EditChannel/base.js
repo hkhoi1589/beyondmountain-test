@@ -45,7 +45,7 @@ function EditChannel({
 		setIsPrivate(isPrivate);
 		setTitle(title);
 		setDesc(description);
-	}, [is_private, name, description]);
+	}, [is_private, name, description, isPrivate, title]);
 
 	return (
 		<div ref={modal} className={`modal sm:modal-middle ${isOpen ? 'modal-open' : ''}`}>

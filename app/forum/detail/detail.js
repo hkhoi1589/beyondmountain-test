@@ -49,7 +49,7 @@ export default function DetailPost() {
 
 	useEffect(() => {
 		setMutateDetailPost(mutate);
-	}, []);
+	}, [mutate, setMutateDetailPost]);
 
 	useEffect(() => {
 		if (!isError) return;
@@ -63,7 +63,7 @@ export default function DetailPost() {
 		if (!post.is_public && profile.user_id !== post.author?.id)
 			toast.error('This post is private!');
 		//console.log(post);
-	}, [post]);
+	}, [post, profile.user_id]);
 
 	if (isLoading || !post || !id) return <Loading />;
 

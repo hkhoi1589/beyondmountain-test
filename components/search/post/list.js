@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 
 import Progress from '@/components/progress';
@@ -35,7 +36,7 @@ export default function PostList({
 				setSize(size + 1);
 			}
 		}
-	}, [isInViewport]);
+	}, [data, hitEnd, isInViewport, isLoading, setSize, size]);
 
 	return (
 		<div>

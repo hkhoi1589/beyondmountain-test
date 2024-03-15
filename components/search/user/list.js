@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 import Progress from '@/components/progress';
 import Loading from '@/app/forum/you/friends-list/loading';

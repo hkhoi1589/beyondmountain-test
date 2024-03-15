@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Team({ className = "", color = "" }) {
@@ -60,8 +61,8 @@ export default function Team({ className = "", color = "" }) {
             Meet our team
           </h3>
           <p className="opacity-70 mt-3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum has been the industry's standard dummy.
+            {`Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.Lorem Ipsum has been the industry's standard dummy.`}
           </p>
         </div>
         <div className="mt-12">
@@ -69,11 +70,7 @@ export default function Team({ className = "", color = "" }) {
             {team.map((item, idx) => (
               <li key={idx}>
                 <div className="w-24 h-24 mx-auto">
-                  <img
-                    src={item.avatar}
-                    className="w-full h-full rounded-full"
-                    alt=""
-                  />
+                  <Image className="w-full h-full rounded-full" src={item.avatar} alt="avatar" />
                 </div>
                 <div className="mt-2">
                   <h4 className="opacity-80 font-semibold sm:text-lg">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Testimonial({ className = "" }) {
   return (
     <section className={`py-14 ${className}`}>
@@ -15,10 +17,7 @@ export default function Testimonial({ className = "" }) {
               </p>
             </blockquote>
             <div className="mt-6">
-              <img
-                src="/img/avatar/kimthiendung.jpg"
-                className="w-16 h-16 mx-auto rounded-full"
-              />
+              <Image src="/img/avatar/kimthiendung.jpg" alt="kimthiendung.jpg" className="w-16 h-16 mx-auto rounded-full" />
               <div className="mt-3">
                 <span className="block opacity-90 font-semibold">
                   Kim Thien Dung

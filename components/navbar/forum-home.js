@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 export default function Navbar({ className = '' }) {
 	const [toggleMenu, setToggleMenu] = useState(false);
@@ -31,8 +33,13 @@ export default function Navbar({ className = '' }) {
 			<nav className='container mx-auto px-4 flex justify-between min-h-16'>
 				<div className='-ml-4'>
 					<a href='/' className='flex items-center overflow-hidden max-h-[69px]'>
-						<img height='69px' src='/img/svg/h.svg' />
-						<img height='69px' src='/img/svg/hight-school.svg' className='mt-2 ml-2' />
+						<Image src='/img/svg/h.svg' alt='h.svg' height='69px' />
+						<Image
+							src='/img/svg/hight-school.svg'
+							alt='hight-school.svg'
+							height='69px'
+							className='mt-2 ml-2'
+						/>
 					</a>
 				</div>
 				<div className='flex items-center'>
@@ -105,14 +112,15 @@ export default function Navbar({ className = '' }) {
 									{item.name} <i className='ri-add-fill'></i>
 								</div>
 								{toggleMenu &&
-									item.child.map((child) => {
-										return (
-											<a href='#' className='flex text-sm'>
-												<i className='ri-corner-down-right-fill mr-1'></i>
-												{child.name}
-											</a>
-										);
-									})}
+									item.child.map((child, idx) => (
+										<Link
+											href='#'
+											key={`items-${idx}`}
+											className='flex text-sm'>
+											<i className='ri-corner-down-right-fill mr-1'></i>
+											{child.name}
+										</Link>
+									))}
 							</div>
 						);
 					})}

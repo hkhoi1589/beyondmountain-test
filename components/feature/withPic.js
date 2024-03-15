@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Feature({ className = "" }) {
   const features = [
     {
@@ -75,10 +77,7 @@ export default function Feature({ className = "" }) {
           </div>
         </div>
         <div className="mt-12 lg:mt-0">
-          <img
-            src="/img/common/desktop.png"
-            className="w-full shadow-lg rounded-lg border"
-          />
+          <Image src="/img/common/desktop.png" alt="desktop.png" className="w-full shadow-lg rounded-lg border" />
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Sidebar({ className = "" }) {
@@ -241,10 +242,7 @@ export default function Sidebar({ className = "" }) {
             className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-neutral-focus"
             href="#"
           >
-            <img
-              className="w-6 h-6 rounded-full"
-              src="/img/avatar/kimthiendung.jpg"
-            />
+            <Image className="w-6 h-6 rounded-full" src="/img/avatar/kimthiendung.jpg" alt="kimthiendung.jpg" />
             <span className="sidebar-text ml-5 text-sm font-medium">
               Funny channel
             </span>

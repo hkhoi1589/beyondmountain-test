@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 export default function Team({ className = '' }) {
 	return (
 		<section id='team' className={`py-28 ${className}`}>

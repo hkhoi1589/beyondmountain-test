@@ -2,6 +2,7 @@
 import React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import Image from 'next/image';
 
 const animation = { duration: 20000, easing: (t) => t };
 
@@ -34,19 +35,19 @@ export default function Carousel(props) {
 	return (
 		<div ref={sliderRef} className='keen-slider'>
 			<div className='keen-slider__slide rounded-lg'>
-				<img width={378} height={212} src='/img/course/s-1.png' />
+				<Image src='/img/course/s-1.png' width={378} height={212} alt='s-1.png'/>
 			</div>
 			<div className='keen-slider__slide rounded-lg'>
-				<img width={378} height={212} src='/img/course/s-2.png' />
+				<Image src='/img/course/s-2.png' width={378} height={212} alt='s-2.png'/>
 			</div>
 			<div className='keen-slider__slide rounded-lg'>
-				<img width={378} height={212} src='/img/course/s-3.png' />
+				<Image src='/img/course/s-3.png' width={378} height={212} alt='s-3.png'/>
 			</div>
 			<div className='keen-slider__slide rounded-lg'>
-				<img width={378} height={212} src='/img/course/s-4.png' />
+				<Image src='/img/course/s-4.png' width={378} height={212} alt='s-4.png'/>
 			</div>
 			<div className='keen-slider__slide rounded-lg'>
-				<img width={378} height={212} src='/img/course/s-2.png' />
+				<Image src='/img/course/s-2.png' width={378} height={212} alt='s-2.png'/>
 			</div>
 		</div>
 	);

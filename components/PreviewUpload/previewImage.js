@@ -1,5 +1,6 @@
 'use client';
 import postApi from '@/services/postApi.service';
+import Image from 'next/image';
 import React, { useEffect } from 'react';
 
 function PreviewUpload({ className = '', selectedImage = [], setSelectedImage, idPost = '' }) {
@@ -16,7 +17,7 @@ function PreviewUpload({ className = '', selectedImage = [], setSelectedImage, i
 	useEffect(() => {
 		// Make sure to revoke the data uris to avoid memory leaks, will run on unmount
 		return () => selectedImage.forEach((file) => URL.revokeObjectURL(file.preview));
-	}, []);
+	}, [selectedImage]);
 
 	// useEffect(() => {
 	// 	console.log('selectedImage', selectedImage);
@@ -30,7 +31,7 @@ function PreviewUpload({ className = '', selectedImage = [], setSelectedImage, i
 					style={{ flexBasis: '20%' }}
 					key={`filename-${idx}`}>
 					<div className='relative rounded w-full h-full flex items-stretch'>
-						<img src={file.preview} className='object-cover' />
+						<Image src={file.preview} alt='preview-img' className='object-cover' />
 						<div
 							className='btn btn-xs btn-circle btn-error text-white absolute -right-2 -top-2'
 							onClick={() => removePic(idx)}>

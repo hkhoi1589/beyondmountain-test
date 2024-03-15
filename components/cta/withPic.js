@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function CTA({ className = "" }) {
@@ -35,7 +36,7 @@ export default function CTA({ className = "" }) {
           </Link>
         </div>
         <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
-          <img src="/img/common/dashboard.png" alt="" className="w-full" />
+          <Image src="/img/common/dashboard.png" alt="dashboard.png" className="w-full"/>
         </div>
       </div>
     </section>

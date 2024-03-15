@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Navbar({ className = '' }) {
 	return (
 		<div className={`navbar bg-base-100 ${className}`}>
@@ -101,7 +103,7 @@ export default function Navbar({ className = '' }) {
 					<div className='dropdown dropdown-end'>
 						<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
 							<div className='w-10 rounded-full'>
-								<img src='/img/avatar/kimthiendung.jpg' />
+								<Image src='/img/avatar/kimthiendung.jpg' alt="kimthiendung.jpg" />
 							</div>
 						</label>
 						<ul

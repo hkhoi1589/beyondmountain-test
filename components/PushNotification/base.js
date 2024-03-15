@@ -22,24 +22,6 @@ export default function PushNotification() {
 		dropdownRef.current.removeAttribute('open'); // collapse dropdown when redirect
 	};
 
-	const handlePermission = async () => {
-		Notification.requestPermission().then(async (permission) => {
-			if (permission === 'granted') {
-				//If notification is allowed
-				// create token
-				await createToken(setFCMToken);
-
-				// foreground notification
-				receiveMessage(addNoti);
-			} else {
-				//If notification is not allowed
-				toast.warn(
-					'Your notification permission was blocked. Please grant this permission to use this app!'
-				);
-			}
-		});
-	};
-
 	useEffect(() => {
 		// Initialize Firebase
 		const app = initializeApp({
@@ -70,9 +52,23 @@ export default function PushNotification() {
 		} else if (Notification.permission == 'denied') {
 			toast.warn('Notifications are disabled.');
 		} else {
-			handlePermission();
+			Notification.requestPermission().then(async (permission) => {
+				if (permission === 'granted') {
+					//If notification is allowed
+					// create token
+					await createToken(setFCMToken);
+	
+					// foreground notification
+					receiveMessage(addNoti);
+				} else {
+					//If notification is not allowed
+					toast.warn(
+						'Your notification permission was blocked. Please grant this permission to use this app!'
+					);
+				}
+			});
 		}
-	}, []);
+	}, [addNoti, setFCMToken]);
 
 	useEffect(() => {
 		const newCount = noties && noties?.filter((v) => !v.isSeen).length;

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Authen({ className = '' }) {
@@ -7,7 +8,7 @@ export default function Authen({ className = '' }) {
 			<div className='max-w-sm w-full space-y-8'>
 				<div className='text-center'>
 					<div className='flex items-center justify-center'>
-						<img src='/img/svg/logo.svg' width={36} />
+						<Image src='/img/svg/logo.svg' width={36} alt='logo' />
 						<span className='ml-3 text-3xl font-semibold opacity-90'>WindyUI</span>
 					</div>
 					<div className='mt-5 space-y-2'>
@@ -15,7 +16,7 @@ export default function Authen({ className = '' }) {
 							Log in to your account
 						</h3>
 						<div>
-							Don't have an account?{' '}
+							{`Don't have an account? `}
 							<Link href='/' className='font-medium text-primary hover:text-primary'>
 								Sign up
 							</Link>

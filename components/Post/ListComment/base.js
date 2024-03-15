@@ -22,7 +22,7 @@ export default function ListComment({ idPost }) {
 
 	useEffect(() => {
 		setMutate(mutate);
-	}, []);
+	}, [mutate, setMutate]);
 
 	useEffect(() => {
 		if (!isError && !errorAdd) return;
@@ -32,7 +32,7 @@ export default function ListComment({ idPost }) {
 
 	useEffect(() => {
 		setDataComments(comments_post);
-	}, [comments_post]);
+	}, [comments_post, setDataComments]);
 
 	// useEffect(() => {
 	// 	console.log('dataComments ListComment', dataComments);

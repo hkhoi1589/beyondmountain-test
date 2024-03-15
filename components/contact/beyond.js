@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Contact({ className = '' }) {
 	const contactMethods = [
 		{
@@ -38,7 +40,7 @@ export default function Contact({ className = '' }) {
 					</div>
 				</div>
 				<div className='relative'>
-					<img src='/img/course/vertical-2.png' className='w-72 -mt-36 mx-auto' />
+					<Image src='/img/course/vertical-2.png' className='w-72 -mt-36 mx-auto' alt="vertical-2.png"/>
 				</div>
 			</div>
 		</section>

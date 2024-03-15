@@ -2,7 +2,7 @@
 import { useUserStore } from '@/store/forum';
 import { API, CLIENT_ID, CLIENT_SECRET } from '@/utils/constant';
 import fetcher from '@/utils/fetcher';
-import jwt_decode from 'jwt-decode';
+import { jwtDecode } from "jwt-decode";
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -25,7 +25,7 @@ export default function Form() {
 
 	useEffect(() => {
 		if (access) router.push('/forum/');
-	}, [access]);
+	}, [access, router]);
 
 	// prevent submitting invalid or empty emails
 	const {
@@ -50,7 +50,7 @@ export default function Form() {
 
 			if (me.status) {
 				const obj = me?.data || {};
-				const decoded = jwt_decode(data.access_token);
+				const decoded = jwtDecode(data.access_token);
 
 				setProfile({
 					...obj,

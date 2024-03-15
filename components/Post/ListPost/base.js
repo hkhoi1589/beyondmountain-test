@@ -13,9 +13,9 @@ import { redirect, useSearchParams } from 'next/navigation';
 
 function ListPost({ isChannel = false, customText = '' }) {
 	let channel_id = '';
+	const searchParams = useSearchParams();
 
 	if (isChannel) {
-		const searchParams = useSearchParams();
 		channel_id = searchParams.get('channel_id');
 	}
 
@@ -47,18 +47,18 @@ function ListPost({ isChannel = false, customText = '' }) {
 
 	useEffect(() => {
 		setMutatePosts(mutate);
-	}, []);
+	}, [mutate, setMutatePosts]);
 
 	useEffect(() => {
 		if (!isError && !errorAdd && !errorAddChannel) return;
 		toast.error(errorAdd || isError);
 		console.log('ListPost', errorAdd || isError);
 		redirect('/forum/');
-	}, [isError, errorAdd]);
+	}, [isError, errorAdd, errorAddChannel]);
 
 	useEffect(() => {
 		setDataPosts(posts);
-	}, [posts]);
+	}, [posts, setDataPosts]);
 
 	// useEffect(() => {
 	// 	if (isChannel) console.log('ischannel posts', dataPosts);

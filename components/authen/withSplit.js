@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BG from '@/components/bg/radial';
+import Image from 'next/image';
 
 export default function Authen({ className = '' }) {
 	return (
@@ -7,7 +8,7 @@ export default function Authen({ className = '' }) {
 			<div className='relative flex-1 hidden items-center justify-center h-screen bg-gray-900 lg:flex'>
 				<div className='relative z-10 w-full max-w-md text-white'>
 					<div className='flex items-center'>
-						<img src='/img/svg/logo.svg' width={36} />
+						<Image src='/img/svg/logo.svg' width={36} alt='logo' />
 						<span className='ml-3 text-3xl font-semibold opacity-90'>WindyUI</span>
 					</div>
 					<div className='mt-16 space-y-3'>
@@ -17,26 +18,12 @@ export default function Authen({ className = '' }) {
 							card required.
 						</p>
 						<div className='flex items-center -space-x-2 overflow-hidden'>
-							<img
-								src='/img/avatar/kimthiendung.jpg'
-								className='w-10 h-10 rounded-full border-2 border-white'
-							/>
-							<img
-								src='/img/avatar/user-1.jpg'
-								className='w-10 h-10 rounded-full border-2 border-white'
-							/>
-							<img
-								src='/img/avatar/user-2.jpg'
-								className='w-10 h-10 rounded-full border-2 border-white'
-							/>
-							<img
-								src='/img/avatar/user-3.jpg'
-								className='w-10 h-10 rounded-full border-2 border-white'
-							/>
-							<img
-								src='/img/avatar/user-4.jpg'
-								className='w-10 h-10 rounded-full border-2 border-white'
-							/>
+							<Image src='/img/avatar/kimthiendung.jpg' className='w-10 h-10 rounded-full border-2 border-white' alt='avatar' />
+							<Image src='/img/avatar/user-1.jpg' className='w-10 h-10 rounded-full border-2 border-white' alt='user-1.jpg' />
+							<Image src='/img/avatar/user-2.jpg' className='w-10 h-10 rounded-full border-2 border-white' alt='user-2.jpg' />
+							<Image src='/img/avatar/user-3.jpg' className='w-10 h-10 rounded-full border-2 border-white' alt='user-3.jpg' />
+							<Image src='/img/avatar/user-4.jpg' className='w-10 h-10 rounded-full border-2 border-white' alt='user-4.jpg' />
+							
 							<p className='text-sm opacity-50 font-medium translate-x-5'>
 								Join 5.000+ users
 							</p>
@@ -49,7 +36,7 @@ export default function Authen({ className = '' }) {
 				<div className='w-full max-w-md space-y-8 px-4 bg-base-100 sm:px-0'>
 					<div>
 						<div className='flex items-center lg:hidden'>
-							<img src='/img/svg/logo.svg' width={36} />
+							<Image src='/img/svg/logo.svg' alt='logo.svg' width={36} />
 							<span className='ml-3 text-3xl font-semibold opacity-90'>WindyUI</span>
 						</div>
 						<div className='mt-5 space-y-2'>
